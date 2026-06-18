@@ -1,0 +1,49 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --teal: #2D6BE4;
+  --teal-d: #1f5bd6;
+  --navy: #0B1B3A;
+  --mint: #EBF2FF;
+  --slate: #5B6A82;
+  --line: #E4E9F1;
+  --bg: #F4F6FB;
+  --green: #16A34A;
+  --red: #EF4444;
+  --orange: #F59E0B;
+}
+
+* { box-sizing: border-box; }
+body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Arial, sans-serif; background: var(--bg); }
+
+.btn-p { background: var(--teal); color: white; }
+.btn-p:hover { background: var(--teal-d); }
+.btn-g { background: white; color: var(--navy); border: 1.5px solid var(--line); }
+.btn-g:hover { border-color: var(--teal); color: var(--teal); }
+
+.card { background: white; border: 1.5px solid var(--line); border-radius: 14px; box-shadow: 0 1px 3px rgba(15,27,46,.06), 0 6px 20px rgba(15,27,46,.08); }
+
+.nav-item { display: flex; align-items: center; gap: 9px; width: 100%; padding: 9px 11px; border-radius: 9px; color: #46566E; font-size: 13.5px; font-weight: 500; transition: .12s; cursor: pointer; }
+.nav-item:hover { background: var(--bg); color: #0F1B2E; }
+.nav-item.active { background: var(--teal); color: white; font-weight: 700; }
+
+.pill { display: inline-flex; font-size: 11px; font-weight: 700; padding: 3px 9px; border-radius: 20px; }
+.pill-b { background: #EFF6FF; color: #1D4ED8; }
+.pill-t { background: var(--mint); color: var(--teal-d); }
+.pill-g { background: #F0FDF4; color: #15803D; }
+.pill-o { background: #FFF7ED; color: #C2410C; }
+.pill-p { background: #F5F3FF; color: #6D28D9; }
+.pill-gr { background: #F1F5F9; color: var(--slate); }
+
+.listing-card { cursor: pointer; border-left: 3px solid var(--line); }
+.lt { display: inline-flex; font-size: 10px; font-weight: 800; padding: 2px 7px; border-radius: 6px; text-transform: uppercase; }
+.lt-s { background: #F0FDF4; color: #15803D; }
+.lt-d { background: #FFF7ED; color: #C2410C; }
+.lt-sv { background: #F5F3FF; color: #6D28D9; }
+.lt-l { background: #FFFBEB; color: #B45309; }
+.lt-e { background: #FFF1F2; color: #BE123C; }
+.lt-c { background: #F0FDF4; color: #065F46; }
+.lt-j { background: #EFF6FF; color: #1D4ED8; }
+.lt-t { background: #F5F3FF; color: #5B21B6; }
