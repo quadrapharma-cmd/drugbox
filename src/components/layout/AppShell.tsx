@@ -13,6 +13,7 @@ const NAV = [
   { id:'groups', label:'Groups', icon:'👥', href:'/groups' },
   { id:'jobs', label:'Jobs', icon:'💼', href:'/jobs' },
   { id:'training', label:'Training', icon:'🎓', href:'/training' },
+  { id:'profile', label:'My Profile', icon:'👤', href:'/profile/me' },
 ]
 
 const TICKER = ['⚗️ Supply: Metformin HCl GMP – $5.80/kg','🔍 Demand: Ciprofloxacin HCl – 2MT/month','📋 EDA Cosmetic Registration For Sale','🏭 Contract Mfg – WHO-GMP','💼 Job: Senior RA Specialist – Egypt','🌍 GCC Registration – All 6 States','⚙️ Fette 1200 Tablet Press – $45K','💧 Hyaluronic Acid – $180/kg']
@@ -123,7 +124,7 @@ export default function AppShell({ children }: { children: React.ReactNode }) {
 
         {/* Bottom nav mobile */}
         <nav className="fixed bottom-0 left-0 right-0 lg:hidden h-14 bg-white flex items-center justify-around z-50" style={{borderTop:'1.5px solid #E4E9F1'}}>
-          {['feed','market','messages','network','groups'].map(id => {
+          {['feed','market','messages','network','profile'].map(id => {
             const item = NAV.find(n=>n.id===id)!
             return (
               <Link key={id} href={item.href} className={`flex flex-col items-center gap-0.5 flex-1 py-1 text-xs font-bold ${curPage===id ? 'text-blue-600' : 'text-gray-400'}`}>
